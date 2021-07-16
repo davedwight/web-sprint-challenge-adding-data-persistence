@@ -30,6 +30,29 @@ async function get() {
   return result;
 }
 
+async function getById(id) {
+  let [row] = await db("tasks").where("task_id", id);
+
+  if (row.task_completed === 0) {
+    row = {
+      ...row,
+      task_completed: false,
+    };
+  } else {
+    row = {
+      ...row,
+      task_completed: false,
+    };
+  }
+  return row;
+}
+
+async function insert(task) {
+  const [task_id] = await db("tasks").insert(task);
+  return getById(task_id);
+}
+
 module.exports = {
   get,
+  insert,
 };
