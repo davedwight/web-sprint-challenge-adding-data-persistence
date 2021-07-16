@@ -32,9 +32,10 @@ async function getById(id) {
   } else {
     row = {
       ...row,
-      project_completed: false,
+      project_completed: true,
     };
   }
+
   return row;
 }
 
