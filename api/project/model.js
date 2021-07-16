@@ -21,6 +21,29 @@ async function get() {
   return result;
 }
 
+async function getById(id) {
+  let [row] = await db("projects").where("project_id", id);
+
+  if (row.project_completed === 0) {
+    row = {
+      ...row,
+      project_completed: false,
+    };
+  } else {
+    row = {
+      ...row,
+      project_completed: false,
+    };
+  }
+  return row;
+}
+
+async function insert(project) {
+  const [project_id] = await db("projects").insert(project);
+  return getById(project_id);
+}
+
 module.exports = {
   get,
+  insert,
 };
