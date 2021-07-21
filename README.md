@@ -1,5 +1,5 @@
 # Adding Data Persistence Sprint Challenge
-
+ 
 **Read these instructions carefully. Understand exactly what is expected _before_ starting this Sprint Challenge.**
 
 This challenge allows you to practice the concepts and techniques learned over the past sprint and apply them in a concrete project. This sprint explored **Data Persistence**. During this sprint, you studied **RDBMS, including SQL, multi-table queries, and data modeling**. In your challenge this week, you will demonstrate your mastery of these skills by creating **a database based on given specifications**.
@@ -118,6 +118,17 @@ Build an API inside the `api` folder with endpoints for:
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. Explain the difference between Relational Databases and SQL.
+
+  A relational database is a digital database that has tables that have relationships with one another using a system of primary and foreign keys that correspond to one another. SQL is a querying language that is the standard for querying the database and returning specific slices of data.
+
 2. Why do tables need a Primary Key?
+
+  Tables need a primary key because it is essential that each record can be uniquely identified.
+
 3. What is the name given to a table column that references the Primary Key on another table?
+
+  Foreign key
+
 4. What do we need in order to have a _many to many_ relationship between two tables?
+
+  An associative or junction table that maps two or more tables together by having the tables' primary keys listed in the same record as foreign keys in the junction table.
